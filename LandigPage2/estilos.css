@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*body {
+    background-image: linear-gradient(black, blue);
+}*/
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    z-index: 10;
+}
+
+.logo {
+    color: white;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.menu-icono {
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+#menu {
+    display: none;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav li {
+    margin: 0 10px;
+}
+
+.nav li a {
+    color: white;
+    font-weight: bold;
+    font-size: 23px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav li:hover a {
+    color: purple;
+}
+
+.redes {
+    display: flex;
+}
+
+.redes i {
+    color: white;
+    font-size: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.redes i:hover {
+    color: purple;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url("imagenes/bg-gta5.png");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: 0.5s;
+
+}
+
+.banner::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5)
+}
+
+.content {
+    position: relative;
+    max-width: 550px;
+    display: none;
+    visibility: hidden;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.content.active {
+    display: block;
+    visibility: visible;
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.producto {
+    max-width: 250px;
+}
+
+.banner .content h4 {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.banner .content h4 span {
+    padding: 0 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.banner .content h4 span:first-child {
+    padding-left: 0;
+}
+
+.banner .content h4 span:last-child {
+    border-right: none;
+}
+
+.banner .content p {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.5em;
+    color: white;
+    margin: 10px 0 20px;
+}
+
+.banner .content .button {
+    position: relative;
+}
+
+.banner .content .button a {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    background-color: red;
+    color: white;
+    padding: 6px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.banner .content .button a:nth-child(2) {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2)
+}
+
+.banner .content .button a:hover:nth-child(2) {
+    background-color: greenyellow;
+}
+
+.banner .carousel-box {
+    position: relative;
+    min-width: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+}
+
+.carousel {
+    position: relative;
+    height: 550px;
+    perspective: 1500px;
+}
+
+.carousel .carousel-item {
+    width: 250px;
+    cursor: pointer;
+}
+
+.carousel .carousel-item img {
+    max-width: 235px;
+    border-radius: 10px;
+    transform: translateX(8px) translateY(-60px);
+    object-fit: cover;
+    object-position: center;
+}
+
+.trailer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.trailer.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.trailer iframe {
+    width: 900px;
+    height: 500px;
+}
+
+.trailer .cerrar {
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    filter: invert(1);
+    max-width: 70px;
+}
+
+
+/*.tituloL4D{
+    filter: invert(0.11);
+}*/
+
+/* Media Queries */
+
+@media (max-width: 767px) {
+    header {
+        padding: 20px 10px;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .menu-icono {
+        display: initial;
+    }
+
+    .nav {
+        flex-direction: row;
+        margin-top: 10px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right:0;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        display: none;
+    }
+
+    #menu:checked ~ .nav {
+        display: initial;
+    }
+
+    .redes{
+        display: none;
+    }
+    
+    .nav li {
+        margin: 5px 0;
+    }
+
+    .nav li a {
+        font-size: 18px;
+    }
+
+    .redes i {
+        font-size: 18px;
+        margin-right: 10px;
+        margin-top:20%;
+    }
+
+    .banner {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .banner .content {
+        max-width: 100%;
+        margin-top: 20%;
+    }
+
+    .banner .carousel-box {
+        min-width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .carousel .carousel-item {
+        width: 100%;
+    }
+
+    .trailer iframe {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        padding: 25px 20px;
+    }
+
+    .logo {
+        font-size: 40px;
+    }
+
+    .nav li a {
+        font-size: 20px;
+    }
+
+    .redes i {
+        font-size: 19px;
+    }
+
+    .banner {
+        padding: 30px;
+    }
+
+    .banner .content {
+        max-width: 80%;
+    }
+
+    .banner .carousel-box {
+        min-width: 80%;
+    }
+
+    .carousel .carousel-item {
+        width: 200px;
+    }
+}

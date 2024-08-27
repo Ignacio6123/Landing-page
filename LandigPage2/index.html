@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilos.css">
+    <title>Landing Page</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">GameWorld</a>
+
+        <input type="checkbox" id="menu" />
+
+        <label for="menu">
+            <i class="fa-solid fa-bars menu-icono"></i>
+        </label>
+
+        <ul class="nav">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Juegos</a></li>
+            <li><a href="#">Favoritos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+
+        <div class="redes">
+            <ul>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </ul>
+        </div>
+    </header>
+
+    <div class="banner">
+
+
+        <div class="content gta5 active">
+            <img src="./imagenes/titulo-gta5.png" alt="titulo gta 5" class="producto" />
+            <h4>
+                <span>2013</span>
+                <span>M</span>
+                <span>$20000</span>
+                <span>Rockstar</span>
+            </h4>
+            <p>
+                Grand Theft Auto V es un juego de acción y aventuras que se juega desde una perspectiva en primera o
+                tercera persona .
+                Los jugadores completan misiones (escenarios lineales con objetivos establecidos) para avanzar en la
+                historia.
+                Fuera de las misiones, los jugadores pueden recorrer libremente el mundo abierto.
+            </p>
+
+            <div class="button">
+                <a href="#" onclick="toggleVideo(); changeVideo('hvoD7ehZPcM?si=NNeBaEJMFUEIw5jH');">ver trailer</a>
+                <a href="#">agregar a favoritos</a>
+            </div>
+        </div>
+
+        <div class="content haloReach">
+            <img src="./imagenes/titulo-haloReach.png" alt="titulo Halo Reach" class="producto" />
+            <h4>
+                <span>2010</span>
+                <span>M</span>
+                <span>$43000</span>
+                <span>Bungie</span>
+            </h4>
+            <p>
+                Halo: Reach es un videojuego de disparos en primera persona. El juego transcurre en el año 2552, donde
+                la humanidad mantiene una guerra con el Covenant.
+                El jugador controla a un nuevo personaje llamado Noble 6,
+                un super soldado miembro del Equipo «Noble» durante la batalla en la colonia humana de Reach.
+            </p>
+
+            <div class="button">
+                <a href="#" onclick="toggleVideo(); changeVideo('s3MabEog3yQ?si=JcAYu6rr8S6ZB0Qp');">ver trailer</a>
+                <a href="#">agregar a favoritos</a>
+            </div>
+        </div>
+
+        <div class="content hydrothunder">
+            <img src="./imagenes/titulo-hydrothunder.png" alt="titulo Hydro Thunder Hurricane" class="producto" />
+            <h4>
+                <span>2010</span>
+                <span>E</span>
+                <span>$800</span>
+                <span>Vector Unit</span>
+            </h4>
+            <p>
+                Hydro Thunder Hurricane es un juego de carreras de botes de estilo arcade y la secuela de Hydro Thunder.
+                El juego implica que los jugadores seleccionen uno de los nueve barcos para correr a través de uno de
+                los ocho cursos.
+                Los jugadores pueden acumular potenciadores de impulso a lo largo de un curso que transforman
+                físicamente
+                el barco en una forma de aspecto más agresivo. Una vez transformados, los jugadores pueden usar el
+                impulso adquirido para
+                aumentar la velocidad del bote temporalmente o para saltar obstáculos.
+            </p>
+
+            <div class="button">
+                <a href="#" onclick="toggleVideo(); changeVideo('2yvJtfrYNtM?si=uPfnFu9yKoHdJL4D');">ver trailer</a>
+                <a href="#">agregar a favoritos</a>
+            </div>
+        </div>
+
+        <div class="content left4dead">
+            <img src="./imagenes/titulo-left4dead.png" alt="titulo Left 4 Dead" class="producto tituloL4D" />
+            <h4>
+                <span>2008</span>
+                <span>M</span>
+                <span>$1110</span>
+                <span>Valve</span>
+            </h4>
+            <p>
+                Left 4 Dead es un videojuego de terror de disparos en primera persona.
+                Ambientado tras un brote de zombis en la costa este de Estados Unidos,
+                el juego enfrenta a sus cuatro protagonistas, apodados los "Supervivientes", contra hordas de
+                infectados.
+            </p>
+
+            <div class="button">
+                <a href="#" onclick="toggleVideo(); changeVideo('HfaGBwedwso?si=C-u8AHOMwUlje15x')">ver trailer</a>
+                <a href="#">agregar a favoritos</a>
+            </div>
+        </div>
+
+        <div class="carousel-box">
+            <div class="carousel">
+                <div class="carousel-item" onclick="changeBg('bg-gta5.png', 'gta5');">
+                    <img src="imagenes/gta5Portada.png" alt="portada juego gta 5" />
+                </div>
+                <div class="carousel-item" onclick="changeBg('bg-haloReach.png', 'haloReach');">
+                    <img src="imagenes/haloReachPortada.png" alt="portada juego Halo Reach" />
+                </div>
+                <div class="carousel-item" onclick="changeBg('bg2-left4dead.jpg', 'left4dead');">
+                    <img src="imagenes/left4deadPortada.png" alt="portada Left 4 Dead" />
+                </div>
+                <div class="carousel-item" onclick="changeBg('bg-hydrothunder.png', 'hydrothunder');">
+                    <img src="imagenes/hydrothunderPortada.jpg" alt="portada Hydro Thunder Hurricane" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="trailer">
+        <iframe id="videoTrailer" src="https://www.youtube.com/embed/HfaGBwedwso?si=C-u8AHOMwUlje15x" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+        <img class="cerrar" src="imagenes/cerrar.png" alt="" onclick="toggleVideo();">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel();
+        })
+    </script>
+</body>
+
+</html>
